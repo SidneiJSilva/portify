@@ -23,6 +23,7 @@ export default function Login() {
 		const foundUser = users.find((user) => user.email === email);
 
 		if (foundUser) {
+			localStorage.setItem("portify-user", foundUser.email);
 			navigate("/dashboard");
 		} else {
 			alert("Usuário ou senha inválidos");
