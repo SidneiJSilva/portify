@@ -9,6 +9,12 @@ export const users = [
 		id: 2,
 		name: "Jane Doe",
 		email: "teste2@email.com",
+		services: [
+			{ id: 1, label: "Haircut" },
+			{ id: 2, label: "Nail" },
+			{ id: 3, label: "Beard" },
+		],
+		servicesTo: ["Female", "Male"],
 		type: 2,
 	},
 	{
@@ -22,6 +28,28 @@ export const users = [
 		name: "Jane Smith",
 		email: "teste4@email.com",
 		type: 3,
+	},
+	{
+		id: 5,
+		name: "Susan Dole",
+		email: "teste5@email.com",
+		services: [
+			{ id: 1, label: "Haircut" },
+			{ id: 2, label: "Nail" },
+		],
+		servicesTo: ["Female"],
+		type: 2,
+	},
+	{
+		id: 6,
+		name: "Mike Ross",
+		email: "teste26@email.com",
+		services: [
+			{ id: 1, label: "Haircut" },
+			{ id: 3, label: "Beard" },
+		],
+		servicesTo: ["Male"],
+		type: 2,
 	},
 ];
 

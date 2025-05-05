@@ -1,9 +1,10 @@
-import Card from "../../components/ui/cards/Card";
-import InputText from "../../components/ui/inputs/InputText";
-import SelectInput from "../../components/ui/select/SelectInput";
-import Button from "../../components/ui/buttons/Button";
+import Card from "@/components/ui/cards/Card";
+import InputText from "@/components/ui/inputs/InputText";
+import SelectInput from "@/components/ui/select/SelectInput";
+import Button from "@/components/ui/buttons/Button";
+
 import { useState } from "react";
-import { userTypes } from "../../data/users";
+import { userTypes } from "@/data/users";
 
 export default function Login() {
 	const [email, setEmail] = useState("");
