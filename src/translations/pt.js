@@ -1,9 +1,17 @@
 export const pt = {
 	services: "Serviços",
-	schedule: "Agendamentos",
+	schedules: "Agendamentos",
 	profits: "Lucros",
 	reports: "Relatórios",
 	invoices: "Faturas",
 	payments: "Pagamentos",
 	stores: "Lojas",
+	haircut: "Corte de cabelo",
+	beard: "Barba",
+	nail: "Unhas",
+	chooseAService: "Escolha um serviço",
+	chooseACollaborator: "Escolha um colaborador",
+	chooseADateAndTime: "Escolha uma data e hora",
+	selectATime: "Selecione um horário",
+	schedule: "Agendar",
 };

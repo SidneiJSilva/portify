@@ -1,6 +1,7 @@
 import SelectInput from "@/components/ui/select/SelectInput";
 import Button from "@/components/ui/buttons/Button";
 
+import { pt } from "@/translations/pt";
 import { users } from "@/data/users";
 import { useMemo, useState } from "react";
 import { times } from "@/constants/dateTime";
@@ -53,7 +54,7 @@ export default function Scheduling() {
 	return (
 		<div className="flex flex-col p-4 gap-12">
 			<div className="text-center space-y-4">
-				<h1 className="text-2xl">Choose a service</h1>
+				<h1 className="text-2xl">{pt["chooseAService"]}</h1>
 
 				<div className="flex justify-center gap-2">
 					{servicesOptions.map((service) => (
@@ -71,7 +72,7 @@ export default function Scheduling() {
 									: "ghost"
 							}
 						>
-							{service.label}
+							{pt[service.label] || service.label}
 						</Button>
 					))}
 				</div>
@@ -79,7 +80,7 @@ export default function Scheduling() {
 
 			{selectedService && (
 				<div className="text-center space-y-4 px-10 md:px-100">
-					<h1 className="text-2xl">Choose a collaborator</h1>
+					<h1 className="text-2xl">{pt["chooseACollaborator"]}</h1>
 
 					<SelectInput
 						options={collaboratorsOptions}
@@ -91,7 +92,7 @@ export default function Scheduling() {
 
 			{selectedCollaborator && (
 				<div className="text-center space-y-4 px-10 md:px-100">
-					<h1 className="text-2xl">Choose date and time</h1>
+					<h1 className="text-2xl">{pt["chooseADateAndTime"]}</h1>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
 						<div className="border p-2 border-gray-300 rounded">
@@ -110,6 +111,7 @@ export default function Scheduling() {
 							options={times}
 							value={selectedTime}
 							onChange={(e) => setSelectedTime(e.target.value)}
+							placeholder={pt["selectATime"]}
 						/>
 					</div>
 				</div>
@@ -120,7 +122,7 @@ export default function Scheduling() {
 				selectedDate &&
 				selectedTime && (
 					<div className="text-center">
-						<Button size="large">Agendar</Button>
+						<Button size="large">{pt["schedule"]}</Button>
 					</div>
 				)}
 		</div>

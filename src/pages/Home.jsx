@@ -9,7 +9,9 @@ export default function Home() {
 			<div className="text-center space-y-4">
 				<h1 className="text-5xl text-blue-800 font-bold">HOME</h1>
 
-				<Button onClick={() => navigate("/scheduling")}>Marcação</Button>
+				<Button size="large" onClick={() => navigate("/scheduling")}>
+					Marcação
+				</Button>
 			</div>
 		</div>
 	);
