@@ -5,7 +5,7 @@ export function Header() {
 	const navigate = useNavigate();
 
 	const handleClick = (path) => {
-		navigate(path, { state: { from: "header" } });
+		navigate(path, { state: { redirectTo: "/dashboard" } });
 	};
 
 	return (

@@ -35,7 +35,7 @@ export default function UserIdentification() {
 				<Button
 					className="w-full"
 					onClick={() =>
-						navigate("/login", { state: { from: "user-identification" } })
+						navigate("/login", { state: { redirectTo: "/booking" } })
 					}
 				>
 					LOGIN

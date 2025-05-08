@@ -4,13 +4,16 @@ import Button from "../../components/ui/buttons/Button";
 
 import { users } from "../../data/users";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Login() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	const redirectTo = location.state?.redirectTo;
 
 	const resetFields = () => {
 		setEmail("");
@@ -24,7 +27,7 @@ export default function Login() {
 
 		if (foundUser) {
 			localStorage.setItem("portify-user", foundUser.email);
-			navigate("/dashboard");
+			navigate(redirectTo);
 		} else {
 			alert("Usuário ou senha inválidos");
 			resetFields();
