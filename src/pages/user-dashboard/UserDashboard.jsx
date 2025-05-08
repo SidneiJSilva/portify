@@ -18,9 +18,9 @@ export default function UserDashboard() {
 
 	return (
 		<div className="p-4">
-			<h3 className="text-xl font-semibold">Dashboard - {userType.label}</h3>
+			<h3 className="text-xl font-bold">{user.name}</h3>
 
-			<p className="mb-3">{user.name}</p>
+			<p className="mb-3 font-semibold">{userType.label}</p>
 
 			<div className="grid grid-cols-1 md:grid-cols-6 gap-2">
 				{accessibleAreasByRole[user.type].map((area) => (

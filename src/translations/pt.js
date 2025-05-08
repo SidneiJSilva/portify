@@ -14,4 +14,7 @@ export const pt = {
 	chooseADateAndTime: "Escolha uma data e hora",
 	selectATime: "Selecione um horário",
 	schedule: "Agendar",
+	gradientHaircut: "Corte de cabelo degradê",
+	femaleHaircut: "Corte de cabelo feminino",
+	gelNail: "Unha de gel",
 };

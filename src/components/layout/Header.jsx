@@ -5,7 +5,7 @@ export function Header() {
 	const navigate = useNavigate();
 
 	const handleClick = (path) => {
-		navigate(path);
+		navigate(path, { state: { from: "header" } });
 	};
 
 	return (
